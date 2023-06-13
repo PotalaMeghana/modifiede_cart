@@ -1,15 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.util.*" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.util.*" %>
 <%@ page import="eStoreProduct.model.Product" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Cart</title>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
 </head>
 <body>
-    <div class="container mt-5">
-        <h2>Cart</h2>
+       <div class="container mt-5">
+        <h2>Wishlist</h2>
         <div class="row mt-4">
             <%-- Iterate over the products and render the HTML content --%>
             <%
@@ -24,8 +25,8 @@
                         <h5 class="card-title"><%= product.getName() %></h5>
                         <p class="card-text"><%= product.getDescription() %></p>
                         <p class="card-text"><%= product.getPrice() %></p>
-                        <button class="btn btn-primary removeFromCart" data-product-id="<%= product.getId() %>">Remove from Cart</button>
-                        <button class="btn btn-secondary addToWishlistButton" data-product-id="<%= product.getId() %>">Add to Wishlist</button>
+                        <button class="btn btn-primary removeFromWishlist" data-product-id="<%= product.getId() %>">Remove from wishlist</button>
+                        <button class="btn btn-primary addToCartButton" data-product-id="<%= product.getId() %>">Add To Cart</button>
                     </div>
                 </div>
             </div>

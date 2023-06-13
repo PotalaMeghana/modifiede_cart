@@ -11,145 +11,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-   <!-- <style>
- .dropdown-content1 {
-	right: 0;
-  left: auto;
-  max-width: 400px;
-} 
-@media (max-width: 600px) {
-  .dropdown-content1 {
-    right: auto;
-    left: 0;
-    max-width: 100%;
-  }
-}
-.profile-options {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-.profile-options li {
-  margin-bottom: 10px;
-}
-.profile-options a {
-  display: block;
-  padding: 10px 20px;
-  background-color: #f2f2f2;
-  color: #333;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-.profile-options a:hover {
-  background-color: #ddd;
-}    
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }    
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }    
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }    
-    nav ul li {
-      display: inline;
-    }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-    }
-    nav ul li a:hover {
-      background-color: #555;
-    }
-    .search-bar {
-      text-align: center;
-      padding: 20px;
-      background-color: #f2f2f2;
-    }    
-    .search-bar input[type="text"] {
-      width: 300px;
-      padding: 6px;
-      border: none;
-    }   
-    .search-bar input[type="submit"] {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 6px 10px;
-      cursor: pointer;
-    }    
-    .slideshow-container {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-    }    
-    .slideshow-container img {
-      width: 100%;
-      height: auto;
-    }    
-    .slideshow-container .slide {
-      display: none;
-    }  
-    .slideshow-container .slide.active {
-      display: block;
-    }
-    /* Dropdown styles */
-    .profile-dropdown {
-      position: relative;
-      display: inline-block;
-      transition: visibility;
-    }
-   .dropdown-content {
-    position: absolute;
-    top: 100%;
-    left: -60px; /* Adjust this value as per your preference */
-    display: none;
-    overflow: hidden;
-    background-color: inherit/* Set the background color to match the navbar */
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-    .profile-dropdown:hover .dropdown-content {
-      display: block;
-      opacity: 1;
-      transition: opacity 0.3s ease;
-    }
-	.dropdown-content a {
-    display: block;
-    margin-bottom: 5px;
-    white-space: nowrap; /* Ensures the content stays in a single line */
-    }
-    nav .dropdown {
-      position: relative;
-    }
-    nav .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-    
-  }   
-  </style>
-   -->
+  
    <style type="text/css">
    
        .profile-dropdown {
@@ -176,12 +38,12 @@
   background-color: inherit; /* Set the background color to match the navbar */
   min-width: 120px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
+  padding: 12px 10px;
   z-index: 1;
   opacity: 0;
   transition: opacity 0.3s ease;
   /* Add your desired background and text colors here */
-  background-color: white;
+  background-color: navy;
   color: black;
 }
 
@@ -203,22 +65,38 @@ body {
       margin: 0;
       padding: 0;
     }    
+   
     header {
-      background-color: #333;
-      color: #fff;
+  background-color:navy;
+  color: #fff;
       padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }    
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }    
-    nav ul li {
-      display: inline;
-    }
+}
+       
+    nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 10px;
+}
+
     nav ul li a {
       color: #fff;
       text-decoration: none;
@@ -250,16 +128,17 @@ body {
       max-width: 800px;
       margin: 0 auto;
     }    
-    .slideshow-container img {
-      width: 100%;
-      height: auto;
-    }    
+       
     .slideshow-container .slide {
       display: none;
     }  
     .slideshow-container .slide.active {
       display: block;
     }
+    .slideshow-container img {
+    width: 100%;
+    height: 500px; /* Adjust the height as per your preference */
+    object-fit: cover; 
        
    </style>
 
@@ -348,7 +227,7 @@ body {
           method: 'GET',
           data: { productId: productId },
           success: function(response) {
-            showCart(); // Set the response HTML as the inner HTML of the cart items element
+        	  showWishlist(); // Set the response HTML as the inner HTML of the cart items element
           },
           error: function(xhr, status, error) {
             console.log('AJAX Error: ' + error);
@@ -376,7 +255,8 @@ body {
           method: 'GET',
           data: { userId: 1 },
           success: function(response) {
-            $('#display').html(response); // Set the response HTML as the inner HTML of the cart items element
+        	  console.log("response of wishlist "+response);
+            $('#prod').html(response); // Set the response HTML as the inner HTML of the cart items element
           },
           error: function(xhr, status, error) {
             console.log('AJAX Error: ' + error);
@@ -458,40 +338,38 @@ body {
 </head>
 <body >
   <header>
-    <h1>SLAM Store</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li class="dropdown">
-          <form action="/process-category" method="POST">
-            <select name="catg" id="catg"></select>
-                  
-        </form>     
-        </li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><button type="button" id="cart-button" class="btn btn-primary">Cart</button></li>
-        <li><button type="button" id="Wishlist-button" class="btn btn-primary">Wishlist</button> </li>
-        <!-- <li><a href="#">&#128722; Cart</a></li>
-        <li><a href="#">&#10084; WishList</a></li> -->
-        <li class="profile-dropdown">
-          <% if (!(Boolean) request.getAttribute("fl")) { 
-          %>
-            <i class="fas fa-user-shield"></i>              
-            <div class="dropdown-content">
-              <a href="signUp">Sign Up</a>
-              <a href="signIn">Sign In</a>
-            </div>
-          <% } else { %>
-            <i class="fas fa-user-shield"></i>
-            <div class="dropdown-content">
-              <a href="profilePage">My Profile</a>
-            </div>
-          <% } %>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <h1>SLAM Store</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+      <li>
+        <form action="/process-category" method="POST">
+          <select name="catg" id="catg"></select>
+        </form>
+      </li>
+      <li><button type="button" id="cart-button" class="btn btn-primary" style="background-color: navy; color: white; font-weight: bold;">Cart</button></li>
+      <li><button type="button" id="Wishlist-button" class="btn btn-primary" style="background-color: navy; color: white; font-weight: bold;">Wishlist</button></li>
+      <li class="profile-dropdown">
+  <% if (!(Boolean) request.getAttribute("fl")) { %>
+    <i class="fas fa-user-shield"></i>
+    <div class="dropdown-content">
+      <a href="signUp" style="background-color: navy; color: white; font-weight: bold;">Sign Up</a>
+      <a href="signIn" style="background-color: navy; color: white; font-weight: bold;">Sign In</a>
+    </div>
+  <% } else { %>
+    <i class="fas fa-user-shield"></i>
+    <div class="dropdown-content">
+      <a href="profilePage" style="background-color: navy; color: white; font-weight: bold;">My Profile</a>
+    </div>
+  <% } %>
+</li>
+      
+    </ul>
+  </nav>
+</header>
+  
   <div class="search-bar">
     <form>
       <input type="text" placeholder="Search...">
